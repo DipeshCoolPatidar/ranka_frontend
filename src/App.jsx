@@ -12,6 +12,7 @@ import About from "./pages/About";
 import AdminPanel from "./pages/AdminPanel"; // Import Admin Panel
 import Layout from "./components/Layout"; // Import your layout component
 import Agent_call from "./pages/Agent_call";
+import MessageLogs from "./pages/MessageLogs"
 
 // Utility function to check if the user is authenticated
 const isAuthenticated = () => !!localStorage.getItem("token");
@@ -68,6 +69,13 @@ function App() {
             element={<ProtectedRoute allowedRoles={["Staff"]} />}
           >
             <Route path="" element={<Agent_call/>} />
+            {/* StaffPanel rendered as Home */}
+          </Route>
+          <Route
+            path="messageLogs"
+            element={<ProtectedRoute allowedRoles={["Staff"]} />}
+          >
+            <Route path="" element={<MessageLogs />} />
             {/* StaffPanel rendered as Home */}
           </Route>
 

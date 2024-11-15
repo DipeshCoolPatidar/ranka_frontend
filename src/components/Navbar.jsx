@@ -94,7 +94,7 @@ const Navbar = () => {
           {/* Message Logs Tab */}
           {isAuthenticated && (
             <Link
-              to="/message-logs"
+              to="/messageLogs"
               onClick={() => setActiveLink("logs")}
               className={`text-gray-800 hover:text-gray-500 transition-all flex items-center ${
                 activeLink === "logs" && "font-bold border-b-2 border-blue-500"
@@ -195,7 +195,7 @@ const Navbar = () => {
           {/* Message Logs Tab for Mobile */}
           {isAuthenticated && (
             <Link
-              to="/message-logs"
+              to="/messageLogs"
               className={`block py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-all ${
                 activeLink === "logs" && "font-bold border-b-2 border-blue-500"
               }`}
